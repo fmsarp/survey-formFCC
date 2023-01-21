@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="title">Sample Ethereum Developer Questionnaire</h1>
+    <p id="description">Please fill with the form</p>
+    <form id="survey-form">
+        <fieldset>
+            <h3>Personal Information</h3>
+            <label for="name" id="name-label">Full Name:
+                <input id="name" name="fullname" type="text" placeholder="Enter your fullname" required />
+            </label>
+            <label for="email" name="email" id="email-label">Email:
+                <input name="email" type="email" id="email" placeholder="Enter your email address" required />
+            </label>
+            <label for="number" id="number-label">Age:
+                <input id="number" name="number" type="number" min="18" max="60" placeholder="ex: 23" required />
+            </label>
+            <label for="sex" id="sex-label">Sex: <select name="sex" id="sex">
+                    <option value="">Please Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+            <label for="twitter">Twitter:
+                <input type="text" id="twitter" name="twitter" placeholder="Twitter handle">
+            </label>
+            <label for="ethadd">Ethereum Address/ ENS:
+                <input type="text" id="ethadd" name="ethadd" placeholder="Ethereum address or ENS">
+            </label>
+        </fieldset>
+        <fieldset>
+            <h3>Self Analysis</h3>
+            <label for="describe-yourself">Describe yourself in few words.
+                <textarea name="describe-yourself" id="describe-yourself" cols="60" rows="10" required></textarea>
+            </label>
+            <label for="skills-developed">Tell us about skills you have developed
+                <textarea name="skills-developed" id="skills-developed" cols="60" rows="10" required></textarea>
+            </label>
+            <label for="edu-qualifications">What is your educational background
+                <textarea name="edu-qualifications" id="edu-qualifications" cols="60" rows="10" required></textarea>
+            </label>
+            <label for="additional-notes">Please feel free if oyu have any additional notes
+                <textarea name="additional-notes" id="additional-notes" cols="60" rows="10" required></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <h3>Which network do you use regularly</h3>
+            <label for="layer-1">
+                <input type="checkbox" name="layer-1" id="eth" class="inline">Ethereum
+            </label>
+            <label for="layer-2">
+                <input type="checkbox" name="layer-2" id="polygon" class="inline">Polygon
+            </label>
+            <label for="layer-2">
+                <input type="checkbox" name="layer-2" id="optimism" class="inline">Optimsim
+            </label>
+            <label>
+                <input type="checkbox" name="layer-2" id="arbitrium" class="inline">Arbitrium
+            </label>
+            <label>
+                <input type="checkbox" name="layer-2" id="other" class="inline" />Other: <textarea name="other"
+                    id="other" cols="30" rows="10" placeholder="Other networks"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <h3>If Ethereum never existed or failed, which other layer 1 network would be your choice</h3>
+            <label for="chain">
+                <input type="radio" name="chain" id="binance" class="inline">Binance
+            </label>
+            <label for="chain">
+                <input type="radio" name="chain" id="solana" class="inline">Solana
+            </label>
+            <label for="chain">
+                <input type="radio" name="chain" id="cardano" class="inline">Cardano
+            </label>
+            <label for="chain">
+                <input type="radio" name="chain" id="avalanche" class="inline">Avalanche
+            </label>
+            <label for="chain">
+                <input type="radio" name="chain" id="near-protocol" class="inline">Near Protocol
+            </label>
+            <label for="chain">
+                <input type="radio" name="chain" id="cosmos" class="inline">Cosmos
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit-btn" />
+
+    </form>
+
+</body>
+
+</html>
