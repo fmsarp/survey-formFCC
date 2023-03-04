@@ -10,92 +10,102 @@
 </head>
 
 <body>
-    <h1 id="title">Sample Ethereum User Questionnaire</h1>
-    <p id="description">Please fill with the form</p>
-    <form id="survey-form">
-        <fieldset>
-            <h3>Personal Information</h3>
-            <label for="name" id="name-label">Full Name:
-                <input id="name" name="fullname" type="text" placeholder="Enter your fullname" required />
-            </label>
-            <label for="email" name="email" id="email-label">Email:
-                <input name="email" type="email" id="email" placeholder="Enter your email address" required />
-            </label>
-            <label for="number" id="number-label">Age:
-                <input id="number" name="number" type="number" min="18" max="60" placeholder="ex: 23" required />
-            </label>
-            <label for="sex" id="sex-label">Sex: <select name="sex" id="sex">
-                    <option value="">Please Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center"> Survey Form</h1>
+            <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
                 </select>
-            </label>
-            <label for="twitter">Twitter:
-                <input type="text" id="twitter" name="twitter" placeholder="Twitter handle">
-            </label>
-            <label for="ethadd">Ethereum Address/ ENS:
-                <input type="text" id="ethadd" name="ethadd" placeholder="Ethereum address or ENS">
-            </label>
-        </fieldset>
-        <fieldset>
-            <h3>Self Analysis</h3>
-            <label for="describe-yourself">Describe yourself in few words.
-                <textarea name="describe-yourself" id="describe-yourself" cols="60" rows="10" required></textarea>
-            </label>
-            <label for="skills-developed">Tell us about skills you have developed
-                <textarea name="skills-developed" id="skills-developed" cols="60" rows="10" required></textarea>
-            </label>
-            <label for="edu-qualifications">What is your educational background
-                <textarea name="edu-qualifications" id="edu-qualifications" cols="60" rows="10" required></textarea>
-            </label>
-            <label for="additional-notes">Please feel free if oyu have any additional notes
-                <textarea name="additional-notes" id="additional-notes" cols="60" rows="10" required></textarea>
-            </label>
-        </fieldset>
-        <fieldset>
-            <h3>Which network do you use regularly</h3>
-            <label for="layer-1">
-                <input type="checkbox" name="layer-1" id="eth" class="inline">Ethereum
-            </label>
-            <label for="layer-2">
-                <input type="checkbox" name="layer-2" id="polygon" class="inline">Polygon
-            </label>
-            <label for="layer-2">
-                <input type="checkbox" name="layer-2" id="optimism" class="inline">Optimsim
-            </label>
-            <label>
-                <input type="checkbox" name="layer-2" id="arbitrium" class="inline">Arbitrium
-            </label>
-            <label>
-                <input type="checkbox" name="layer-2" id="other" class="inline" />Other: <textarea name="other"
-                    id="other" cols="30" rows="10" placeholder="Other networks"></textarea>
-            </label>
-        </fieldset>
-        <fieldset>
-            <h3>If Ethereum never existed or failed, which other layer 1 network would be your choice</h3>
-            <label for="chain">
-                <input type="radio" name="chain" id="binance" class="inline">Binance
-            </label>
-            <label for="chain">
-                <input type="radio" name="chain" id="solana" class="inline">Solana
-            </label>
-            <label for="chain">
-                <input type="radio" name="chain" id="cardano" class="inline">Cardano
-            </label>
-            <label for="chain">
-                <input type="radio" name="chain" id="avalanche" class="inline">Avalanche
-            </label>
-            <label for="chain">
-                <input type="radio" name="chain" id="near-protocol" class="inline">Near Protocol
-            </label>
-            <label for="chain">
-                <input type="radio" name="chain" id="cosmos" class="inline">Cosmos
-            </label>
-        </fieldset>
-        <input type="submit" value="Submit" id="submit-btn" />
-
-    </form>
-
+            </div>
+            <div class="form-group">
+                <p>Would you recommend fmsarp to a friend?</p>
+                <label>
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>Definitely
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio" checked>Maybe
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" value="not-sure" class="input-radio" checked>Not sure
+                </label>
+            </div>
+            <div class="form-group">
+                <p>What is your favorite feature of fmsarp?</p>
+                <select name="mostLike" id="most-like" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="openSource">Open Source</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="front-end-projects">Front-end Projects
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="back-end-projects">Back-end Projects
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="data-visualization">Data Visualization
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="challenges">Challenges
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="open-source-community">Open Source Community
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="gitter-help-rooms">Gitter help rooms
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="videos">Videos
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="city-meetups">City Meetups
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="wiki">Wiki
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="forum">Forum
+                </label>
+                <label >
+                    <input type="checkbox" name="prefer" class="input-checkbox" value="additional-courses">Addtional Courses
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" id="submit-btn" class="submit-button" />
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
